@@ -66,9 +66,7 @@ public Pokemon rivalPokemon
 public int maxDresseur
 
 public boolen isStartedBattle();
-
 public int getCurrentRound();
-public void getCurrentRound();
 public boolen isGameIsFinish();
 
 }

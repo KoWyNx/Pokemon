@@ -1,6 +1,6 @@
 package fr.pokemon.Models;
 
-public class Pokemon {
+public class Pokemon implements Type{
     private String namePokemon;
     private int lifePoint;
     private int maxPower;
@@ -83,5 +83,10 @@ public class Pokemon {
 
     public void setTypeWeaker(String typeWeaker) {
         this.typeWeaker = typeWeaker;
+    }
+
+    @Override
+    public String getType() {
+        return null;
     }
 }
