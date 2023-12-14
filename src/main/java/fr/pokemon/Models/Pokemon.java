@@ -1,18 +1,18 @@
 package fr.pokemon.Models;
 
 public class Pokemon {
-    public String namePokemon;
-    public int lp;
+    private String namePokemon;
+    private int lifePoint;
     private int maxPower;
     private int minPower;
-    public boolean dead;
-    public String attackName;
-    public String typeBetter;
-    public  String typeWeaker;
+    private boolean dead;
+    private String attackName;
+    private String typeBetter;
+    private  String typeWeaker;
 
-    public Pokemon(String namePokemon, int lp, int maxPower, int minPower, boolean dead, String attackName, String typeBetter, String typeWeaker) {
+    public Pokemon(String namePokemon, int lifePoint, int maxPower, int minPower, boolean dead, String attackName, String typeBetter, String typeWeaker) {
         this.namePokemon = namePokemon;
-        this.lp = lp;
+        this.lifePoint = lifePoint;
         this.maxPower = maxPower;
         this.minPower = minPower;
         this.dead = dead;
@@ -29,12 +29,12 @@ public class Pokemon {
         this.namePokemon = namePokemon;
     }
 
-    public int getLp() {
-        return lp;
+    public int getLifePoint() {
+        return lifePoint;
     }
 
-    public void setLp(int lp) {
-        this.lp = lp;
+    public void setLifePoint(int lifePoint) {
+        this.lifePoint = lifePoint;
     }
 
     public int getMaxPower() {
