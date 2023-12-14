@@ -2,19 +2,19 @@ package fr.pokemon.Models;
 
 public class Battle {
     public int currentRound;
-    public boolean isDead;
     public boolean endGame;
     public boolean next;
     Pokemon rivalPokemon;
     public int maxDresseur;
+    Pokeball listPokeball;
 
-    public Battle(int currentRound, boolean isDead, boolean endGame, boolean next, Pokemon rivalPokemon, int maxDresseur) {
+    public Battle(int currentRound, boolean next, Pokemon rivalPokemon, int maxDresseur, Pokeball listPokeball) {
         this.currentRound = currentRound;
-        this.isDead = isDead;
-        this.endGame = endGame;
+        this.endGame = false;
         this.next = next;
         this.rivalPokemon = rivalPokemon;
         this.maxDresseur = maxDresseur;
+        this.listPokeball = listPokeball;
     }
 
     public int getCurrentRound() {
@@ -25,13 +25,6 @@ public class Battle {
         this.currentRound = currentRound;
     }
 
-    public boolean isDead() {
-        return isDead;
-    }
-
-    public void setDead(boolean dead) {
-        isDead = dead;
-    }
 
     public boolean isEndGame() {
         return endGame;
@@ -67,23 +60,20 @@ public class Battle {
 
     public boolean isStartedBattle(boolean isReady){
         if(isReady){
-            System.out.println("Le joueur est prêt");
+            return true;
         }
-        return isReady;
+
+        return false;
     }
 
     public int getCurrentRound(int currentRound){
-        for( int i = 0; i > 1; i++){
-            this.currentRound = currentRound++;
-        }
-        return this.currentRound;
+        return currentRound;
     }
 
-    public boolean isGameIsFinish(boolean endGame){
-        if (this.endGame){
-            endGame = true;
-            System.out.println("Le combat est terminé");
-        }
-        return endGame;
+    public boolean isGameIsFinish(int listPokeball){
+    if(listPokeball == 0){
+        return this.endGame = true;
+    }
+    return false;
     }
 }
