@@ -4,6 +4,7 @@ public class Arene {
     public String name;
     public int nombreDeDresseurs;
     public boolean ready;
+
     /**
      * Constructeur vide qui instancie le nom de l'arene et le nombre de dresseurs
      */
@@ -19,6 +20,22 @@ public class Arene {
      */
     public Arene(String name, int nombreDeDresseurs){
         this.name = name;
+        this.nombreDeDresseurs = nombreDeDresseurs;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getNombreDeDresseurs() {
+        return nombreDeDresseurs;
+    }
+
+    public void setNombreDeDresseurs(int nombreDeDresseurs) {
         this.nombreDeDresseurs = nombreDeDresseurs;
     }
 
