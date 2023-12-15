@@ -97,11 +97,20 @@ public class Pokemon implements Type{
         this.pokemonType = pokemonType;
     }
 
+
+    /**
+     * Permet de recuperer le type du pokemon
+     * @return : type de pokemon
+     * */
     @Override
     public String getType(String type) {
         return this.pokemonType = type;
     }
 
+    /**
+     * Permet de recuperer les informations
+     * @return
+     */
     @Override
     public String toString() {
         return this.namePokemon + " de type " + this.pokemonType + " puissance max " + this.maxPower + " puissance min " + this.minPower;
