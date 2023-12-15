@@ -1,3 +1,16 @@
+## Présentation
+Bienvenue dans le projet de Combats de Pokémon fait avec JAVA 21 !
+Ce projet a été créer pour simuler des combats entre différents Pokémon, 
+en utilisant le langage de programmation Java.
+Le principe du projet est la création de différent pokemon, la mise en place de combats entre 2 dresseurs et ses pokemons de différents types
+dans une arène. 
+
+### Pour lancer le projet
+- Assure toi d'avoir installer JAVA et d'avoir une IDE comme Intellij ou encore eclipse
+- Cloner le répertoire avec un "git clone (url du répertoire)" dans le terminal
+- Une fois le programme lancé suivez juste les instrutions afin de faire combattre vos pokemon
+
+
 ```plantuml
 
 @startUml
@@ -46,6 +59,8 @@ public int dresseur;
 
 public boolen isReady();
 public boolen nextFight();
+public boolen areAllPokeballEmpty(ListPokeball);
+
 }
 
 class Pokeball{
@@ -78,4 +93,4 @@ Pokeball "1" o-- "0..1" Pokemon
 Pokemon "1" o-- "1..3" Attack
 
 
-@endUml
+@endUml 
