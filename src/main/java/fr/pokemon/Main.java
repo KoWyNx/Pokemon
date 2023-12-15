@@ -5,9 +5,10 @@ import fr.pokemon.Models.Pokeball;
 import fr.pokemon.Models.Pokemon;
 import fr.pokemon.Models.Type;
 
+
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Pokemon carapuce = new Pokemon(
                 "carapuce",
                 100,
@@ -32,38 +33,34 @@ public class Main {
                 "feu"
         );
 
+        while (carapuce.getLifePoint() > 0 && salameche.getLifePoint() > 0) {
+            // Tour de Carapuce
+            salameche.setLifePoint(salameche.getLifePoint() - carapuce.getMaxPower());
+            System.out.println(carapuce.getNamePokemon() + " attaque " + carapuce.getAttackName());
+
+            // Vérifier si Salamèche a été vaincu
+            if (salameche.getLifePoint() <= 0) {
+                System.out.println(carapuce.getNamePokemon() + " a vaincu " + salameche.getNamePokemon());
+                break;
+            }
+
+            System.out.println("Il reste : " + salameche.getLifePoint() + " pv à " + salameche.getNamePokemon());
 
 
 
-        Pokeball pokeball = new Pokeball();
-        Pokeball masterBall = new Pokeball(carapuce, "masterBall");
-        Pokeball hyperBall = new Pokeball(salameche, "hyperbBall");
+            // Tour de Salamèche
+            carapuce.setLifePoint(carapuce.getLifePoint() - salameche.getMinPower());
+            System.out.println(salameche.getNamePokemon() + " attaque " + salameche.getAttackName());
 
+            // Vérifier si Carapuce a été vaincu
+            if (carapuce.getLifePoint() <= 0) {
+                System.out.println(salameche.getNamePokemon() + " a vaincu " + carapuce.getNamePokemon());
+                break;
+            }
 
+            System.out.println("Il reste : " + carapuce.getLifePoint() + " pv à " + carapuce.getNamePokemon());
 
-        System.out.println(carapuce);
-        System.out.println(pokeball.getNamePokeball());
-        System.out.println(masterBall.getNamePokeball() + " contient " + carapuce.getNamePokemon());
-        System.out.println(masterBall.isPokeballEmpty());
-        System.out.println(pokeball.isPokeballEmpty());
-
-
-        System.out.println(salameche);
-        System.out.println(hyperBall.getNamePokeball() +  " contient " + salameche.getNamePokemon());
-        System.out.println(hyperBall.isPokeballEmpty());
-
-        carapuce.setLifePoint(carapuce.getLifePoint() - salameche.getMinPower());
-        System.out.println(salameche.getNamePokemon() + " attaque " + salameche.getAttackName());
-        System.out.println("Il reste : " + carapuce.getLifePoint() + " pv à " + carapuce.getNamePokemon());
-
-        salameche.setLifePoint(salameche.getLifePoint() - carapuce.getMaxPower());
-        System.out.println(carapuce.getNamePokemon() + " attaque " + carapuce.getAttackName());
-        System.out.println("Il reste : " + salameche.getLifePoint()+ " pv à " + salameche.getNamePokemon());
-
-
+        }
     }
-
-
-
-
 }
+
