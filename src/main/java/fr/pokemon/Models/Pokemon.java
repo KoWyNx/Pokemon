@@ -10,7 +10,7 @@ public class Pokemon implements Type{
     private String typeBetter;
     private  String typeWeaker;
 
-    public Pokemon(String namePokemon, int lifePoint, int maxPower, int minPower, boolean dead, String attackName, String typeBetter, String typeWeaker) {
+    public Pokemon(String namePokemon, int lifePoint, int maxPower, int minPower, boolean dead, String attackName, String typeBetter) {
         this.namePokemon = namePokemon;
         this.lifePoint = lifePoint;
         this.maxPower = maxPower;
@@ -88,5 +88,10 @@ public class Pokemon implements Type{
     @Override
     public String getType() {
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return this.namePokemon + " + " + this.typeBetter + " ";
     }
 }

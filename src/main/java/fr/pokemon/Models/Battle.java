@@ -70,10 +70,10 @@ public class Battle {
         return currentRound;
     }
 
-    public boolean isGameIsFinish(int listPokeball){
+    public void isGameIsFinish(int listPokeball){
     if(listPokeball == 0){
-        return this.endGame = true;
+         this.endGame = true;
     }
-    return false;
+    this.endGame = false;
     }
 }
