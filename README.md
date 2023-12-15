@@ -60,6 +60,7 @@ public int dresseur;
 public boolen isReady();
 public boolen nextFight();
 public boolen areAllPokeballEmpty(ListPokeball);
+
 }
 
 class Pokeball{
