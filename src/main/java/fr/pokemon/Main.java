@@ -14,7 +14,7 @@ public class Main {
                 80,
                 20,
                 false,
-                "normal, griffe",
+                "lance eau",
                 "feu",
                 "test",
                 "eau"
@@ -26,7 +26,7 @@ public class Main {
                 100,
                 40,
                 false,
-                "normal, griffe",
+                "flamme",
                 "plante",
                 "eau",
                 "feu"
@@ -51,6 +51,14 @@ public class Main {
         System.out.println(salameche);
         System.out.println(hyperBall.getNamePokeball() +  " contient " + salameche.getNamePokemon());
         System.out.println(hyperBall.isPokeballEmpty());
+
+        carapuce.setLifePoint(carapuce.getLifePoint() - salameche.getMinPower());
+        System.out.println(salameche.getNamePokemon() + " attaque " + salameche.getAttackName());
+        System.out.println("Il reste : " + carapuce.getLifePoint() + " pv à " + carapuce.getNamePokemon());
+
+        salameche.setLifePoint(salameche.getLifePoint() - carapuce.getMaxPower());
+        System.out.println(carapuce.getNamePokemon() + " attaque " + carapuce.getAttackName());
+        System.out.println("Il reste : " + salameche.getLifePoint()+ " pv à " + salameche.getNamePokemon());
 
 
     }

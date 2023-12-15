@@ -115,4 +115,5 @@ public class Pokemon implements Type{
     public String toString() {
         return this.namePokemon + " de type " + this.pokemonType + " puissance max " + this.maxPower + " puissance min " + this.minPower;
     }
+
 }
