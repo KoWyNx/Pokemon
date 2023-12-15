@@ -46,7 +46,6 @@ public int dresseur;
 
 public boolen isReady();
 public boolen nextFight();
-
 }
 
 class Pokeball{

@@ -14,4 +14,8 @@ public interface Attack extends Type {
      * @return
      */
     public String getNameAttack();
+@Override
+    public String getType(String type);
 }
+
+
