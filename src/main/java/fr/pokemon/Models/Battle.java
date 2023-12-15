@@ -17,15 +17,26 @@ public class Battle {
         this.listPokeball = listPokeball;
     }
 
+    /**
+     * On récupère le tour actuel
+     * @return : tour actuel
+     */
     public int getCurrentRound() {
         return currentRound;
     }
 
+    /**
+     * On met à jour le nombre de tour
+     * @param currentRound
+     */
     public void setCurrentRound(int currentRound) {
         this.currentRound = currentRound;
     }
 
-
+    /**
+     * On retourne un boolean pour savoir si la game est finie
+     * @return
+     */
     public boolean isEndGame() {
         return endGame;
     }
@@ -58,11 +69,15 @@ public class Battle {
         this.maxDresseur = maxDresseur;
     }
 
+    /**
+     * On vérifie si la partie est bien commencée, si c'est le cas, on passe isReady à true
+     * @param isReady
+     * @return : true si la game peut commencer
+     */
     public boolean isStartedBattle(boolean isReady){
         if(isReady){
             return true;
         }
-
         return false;
     }
 
@@ -70,6 +85,11 @@ public class Battle {
         return currentRound;
     }
 
+    /**
+     * On récupère une liste de pokemon, si cette liste est vide, la game est finie
+     * @param listPokeball
+     * @return : true si la game est finie
+     */
     public boolean isGameIsFinish(int listPokeball){
     if(listPokeball == 0){
         return this.endGame = true;
