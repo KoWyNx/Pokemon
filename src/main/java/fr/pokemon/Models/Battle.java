@@ -90,10 +90,11 @@ public class Battle {
      * @param listPokeball
      * @return : true si la game est finie
      */
-    public boolean isGameIsFinish(int listPokeball){
-    if(listPokeball == 0){
-         this.endGame = true;
-    }
-    this.endGame = false;
+    public boolean isGameIsFinish(int listPokeball) {
+        if (listPokeball == 0) {
+            this.endGame = true;
+        }
+        this.endGame = false;
+        return this.endGame;
     }
 }
